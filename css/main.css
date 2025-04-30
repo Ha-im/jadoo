@@ -16,6 +16,7 @@ nav h1 a{
 }
 header nav{
   margin-top:47px; /* 위 공간은 마진으로 주면 다 뜸 (1)*/
+  margin-bottom:18px;
 }
 .dropdown ul{
   display:none;
@@ -58,7 +59,7 @@ header nav > div{
   justify-content:space-between;
 }
 .hero .content{
-  margin-top:130px;
+  margin-top:112px;
   margin-left:15px;
   width:545px;
 }
@@ -78,6 +79,7 @@ header nav > div{
   letter-spacing:-0.04em; /* -0.04 * 84(현재 폰트사이즈) = -3.36px; */
     /* 폰트사이즈 대비 %면 em으로 사용가능 em단위 = 폰트사이즈 배수 1em = 84px(현재 폰트사이즈) 1.5em = 84*1.5 */
   color:#181E4B;
+  margin-bottom:30px;
 }
 .content h2 strong{
 position:relative;
@@ -91,4 +93,46 @@ position:relative;
   bottom:16px;
   left:-20px;
   z-index:-1;
+}
+.content p{
+  line-height:30px;
+  color:#5E6282;
+  padding-right:70px;
+  margin-bottom:34px;
+}
+.hero .cta{
+  display:flex;
+  gap:44px;
+  align-items:center;
+}
+.cta a{
+  height:60px;
+  display:flex;
+  align-items:center;
+  padding: 0 26px;
+  background:#F1A501;
+  border-radius:10px;
+  font-size:18px;
+  color:#fff;
+  font-family: 'Product Sans Medium Regular';
+}
+.cta button .icon{
+  width: 52px;
+  height:52px;
+  align-items:center;
+  justify-content: center;
+  color:#fff;
+  border-radius:50%;
+  background:#DF6951;
+  display:flex;
+  box-shadow: 0 15px 30px rgba(223,105,81,0.3);
+  font-size:15px; /* 그 안에있는 button 사이즈로인해 svg도 영향을 받아 콕 집어서 사이즈 지정  */
+}
+.cta button{
+  display:flex;
+  gap:21px;
+  align-items:center;
+  font-size:17px;
+  color:#686D77;
+  font-family: 'Product Sans Medium Regular';
 }
