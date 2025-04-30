@@ -57,6 +57,7 @@ header nav > div{
 .hero{
   display:flex;
   justify-content:space-between;
+  margin-bottom:97px;
 }
 .hero .content{
   margin-top:112px;
@@ -135,4 +136,70 @@ position:relative;
   font-size:17px;
   color:#686D77;
   font-family: 'Product Sans Medium Regular';
+}
+.services{
+  position:relative;
+  margin-bottom:156px;
+}
+.services:after{
+  content:'';
+  width:153px;
+  height:166px;
+  background:no-repeat url(../images/services_right_top.svg);
+  position:absolute;
+  right:-92px;
+  top:-8px;
+}
+.services h2{
+  margin-bottom:66px;
+}
+.services ul{
+  display:flex;
+  justify-content:space-between;
+}
+.services ul li{ /* 높이는 주지말것 내용이 바뀌면 자동으로 안늘어남*/ 
+  width: 267px;
+  border-radius:36px;
+  text-align:center;
+  box-sizing:border-box;
+  transition: 0.3s;
+  position:relative;
+  background:#fff;
+}
+.services ul li figure{
+  height:154px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+.services ul li h3{
+  font-family: "Open Sans", sans-serif;
+  font-weight:600;
+  font-size:20px;
+  line-height:27px;
+  color:#1E1D4C;
+  margin-bottom:15px;
+}
+.services ul li p{
+  padding: 0 42px 44px;
+}
+.services ul li:hover{
+  box-shadow: 0px 100px 80px 0px rgba(0, 0, 0, 0.02),0px 64.81px 46.85px 0px rgba(0, 0, 0, 0.0152),0px 38.52px 25.48px 0px rgba(0, 0, 0, 0.0121),0px 20px 13px 0px rgba(0, 0, 0, 0.01),0px 1.85px 3.15px 0px rgba(0, 0, 0, 0.0048),0px 8.15px 6.52px 0px rgba(0, 0, 0, 0.0079);
+}
+.services ul li:after{
+  content:'';
+  display:block;
+  width: 100px;
+  height: 100px;
+  background:#DF6951;
+  border-radius: 30px 0 10px 0;
+  position:absolute;
+  left: 15px;
+  bottom:15px;
+  z-index:-1;
+  transition:0.3s;
+}
+.services ul li:hover:after{
+  left:-33px;
+  bottom: -33px;
 }
