@@ -153,6 +153,9 @@ position:relative;
 .services h2{
   margin-bottom:66px;
 }
+.services h3{
+  text-transform:uppercase;
+}
 .services ul{
   display:flex;
   justify-content:space-between;
@@ -202,4 +205,32 @@ position:relative;
 .services ul li:hover:after{
   left:-33px;
   bottom: -33px;
+}
+.destinations h3{
+  text-transform:capitalize;
+}
+.destinations h2{
+  margin-bottom:60px;
+}
+.destinations ul{
+  display:flex;
+  width: 1040px;
+  justify-content:space-between;
+}
+.destinations ul li{
+  width: 315px;
+  border-radius:24px;
+  overflow:hidden;
+  position:relative;
+}
+.destinations ul li figure img{
+  width: 100%;
+}
+.destinations ul li figcaption{
+  position:absolute;
+  left:0;
+  bottom:0;
+  right:0;
+  background:#fff;
+  padding:27px 26px 42px 20px;
 }
