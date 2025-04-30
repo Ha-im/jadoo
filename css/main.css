@@ -68,6 +68,7 @@ header nav > div{
   line-height:30px;
   color:#DF6951;
   text-transform:uppercase;
+  margin-bottom:24px;
 }
 .hero .content h2{
   font-family: "Volkhov", serif;
@@ -78,7 +79,16 @@ header nav > div{
     /* 폰트사이즈 대비 %면 em으로 사용가능 em단위 = 폰트사이즈 배수 1em = 84px(현재 폰트사이즈) 1.5em = 84*1.5 */
   color:#181E4B;
 }
-.content strong{
-  background: no-repeat url(../images/header_title_bg.svg) 100% 100%;
-
+.content h2 strong{
+position:relative;
+}
+.content h2 strong:after{
+  content:'';
+  width:385px;
+  height:12px;
+  background: no-repeat url(../images/header_title_bg.svg);
+  position:absolute;
+  bottom:16px;
+  left:-20px;
+  z-index:-1;
 }
