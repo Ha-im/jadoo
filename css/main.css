@@ -187,7 +187,7 @@ position:relative;
   padding: 0 42px 44px;
 }
 .services ul li:hover{
-  box-shadow: 0px 100px 80px 0px rgba(0, 0, 0, 0.02),0px 64.81px 46.85px 0px rgba(0, 0, 0, 0.0152),0px 38.52px 25.48px 0px rgba(0, 0, 0, 0.0121),0px 20px 13px 0px rgba(0, 0, 0, 0.01),0px 1.85px 3.15px 0px rgba(0, 0, 0, 0.0048),0px 8.15px 6.52px 0px rgba(0, 0, 0, 0.0079);
+  box-shadow:var(--shadow);
 }
 .services ul li:after{
   content:'';
@@ -206,6 +206,9 @@ position:relative;
   left:-33px;
   bottom: -33px;
 }
+.destinations{
+  margin-bottom:186px;
+}
 .destinations h3{
   text-transform:capitalize;
 }
@@ -216,15 +219,22 @@ position:relative;
   display:flex;
   width: 1040px;
   justify-content:space-between;
+  margin-left:39px;
+  padding-right:77px;
+  background:no-repeat url(../images/top_destination_bg.svg) 1006px 158px;
+  /* background-position-x:98.5%;
+  background-position-y:80% */
 }
 .destinations ul li{
   width: 315px;
   border-radius:24px;
   overflow:hidden;
   position:relative;
+  box-shadow:var(--shadow);
 }
 .destinations ul li figure img{
   width: 100%;
+  border-radius:24px;
 }
 .destinations ul li figcaption{
   position:absolute;
@@ -233,4 +243,26 @@ position:relative;
   right:0;
   background:#fff;
   padding:27px 26px 42px 20px;
+}
+.destinations ul li figcaption h4{
+  display:flex;
+  justify-content:space-between;
+  font-size:18px;
+  font-weight:600;
+  line-height: 1.245;
+  color:#5E6282;
+  margin-bottom:19px;
+}
+.destinations ul li figcaption p{
+  display:flex;
+  gap:15px;
+  align-items:center;
+  font-size:16px;
+  font-weight:600;
+  line-height: 1.245;
+  color:#5E6282;
+}
+.destinations ul li figcaption p svg{
+  /*폰트어썸에서 가져온 arrow는 웹폰트방식이아님  i로 사용 안됨 svg로 사용*/
+  color:#000;/*color변경안될시 fill값으로 변경 fill:#000; 하면 됨 */
 }
