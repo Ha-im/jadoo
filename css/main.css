@@ -270,6 +270,7 @@ position:relative;
   display:flex;
   gap:118px;
   background:no-repeat url(../images/book_bg.svg) right top;
+  padding-bottom:200px;
 }
 .book_a_trip .content{
   width: 511px;
@@ -325,6 +326,13 @@ position:relative;
   box-sizing:border-box;
   position: relative;
   box-shadow: var(--shadow);
+  transform:translateX(-50px);
+  opacity: 0;
+  transition:0.3s;
+}
+.active .pic_of_month .details{
+  transform:translateX(0);
+  opacity: 1;
 }
 .pic_of_month .details img{
 margin-bottom:26px;
@@ -400,6 +408,13 @@ margin-bottom:26px;
   bottom:55px;
   background:#fff;
   padding: 19px 12px 21px 33px;
+  transform:translateX(50px);
+  opacity: 0;
+  transition: 0.3s;;
+}
+.active .pic_of_month .ongoing{
+  transform:translateX(0);
+  opacity: 1;
 }
 .ongoing h5{
   font-size:14px;
@@ -427,4 +442,20 @@ margin-bottom:26px;
   color:#8A79DF;
   font-weight: bold;
   font-weight: 600;
+}
+.progress_bar{
+  width: 156px;
+  height: 5px;
+  border-radius:2.5px;
+  background:#8A79DF;
+  position:relative;
+}
+.progress_bar .bar{
+ width: 40%;
+ height: 100%;
+ position:absolute;
+ left:0;
+ top:0;
+ background:#8A79DF;
+ border-radius:2.5px;
 }
