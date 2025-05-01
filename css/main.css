@@ -448,6 +448,7 @@ margin-bottom:26px;
   height: 5px;
   border-radius:2.5px;
   background:#8A79DF;
+  background:#f5f5f5;
   position:relative;
 }
 .progress_bar .bar{
