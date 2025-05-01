@@ -95,7 +95,7 @@ position:relative;
   left:-20px;
   z-index:-1;
 }
-.content p{
+.hero .content p{
   line-height:30px;
   color:#5E6282;
   padding-right:70px;
@@ -265,4 +265,166 @@ position:relative;
 .destinations ul li figcaption p svg{
   /*폰트어썸에서 가져온 arrow는 웹폰트방식이아님  i로 사용 안됨 svg로 사용*/
   color:#000;/*color변경안될시 fill값으로 변경 fill:#000; 하면 됨 */
+}
+.book_a_trip{
+  display:flex;
+  gap:118px;
+  background:no-repeat url(../images/book_bg.svg) right top;
+}
+.book_a_trip .content{
+  width: 511px;
+}
+.book_a_trip .section-sub-tt, .book_a_trip .section-tt{
+  text-align:left;
+}
+.book_a_trip .section-tt{
+  margin-bottom:31px;
+}
+.book_a_trip .content ol{
+  display:flex;
+  gap:48px;
+  flex-direction:column;
+}
+.book_a_trip .content ol li{
+  display:flex;
+  gap:21px;
+  align-items:flex-start;
+}
+.book_a_trip .content ol li .desc{
+  width: 327px;
+}
+.book_a_trip .content ol li .desc h3{
+  font-weight: bold;
+  line-height: 20px;
+  margin-bottom:4px;
+}
+.book_a_trip .content ol li img{
+  width:47px;
+  height:48px;
+  padding:13px;
+  border-radius:13px;
+  box-sizing:border-box;
+}
+.book_a_trip .content ol li:first-child img{
+  background:#F0BB1F;
+}
+.book_a_trip .content ol li:nth-child(2) img{
+  background:#F15A2B;
+}
+.book_a_trip .content ol li:last-child img{
+  background:#006380;
+}
+.pic_of_month{
+  margin-top:78px;
+  position:relative;
+}
+.pic_of_month .details{
+  padding:20px 24px 30px;
+  width: 370px;
+  background:#fff;
+  box-sizing:border-box;
+  position: relative;
+  box-shadow: var(--shadow);
+}
+.pic_of_month .details img{
+margin-bottom:26px;
+}
+.pic_of_month .details h4{
+  font-size:18px;
+  margin-bottom:13px;
+  line-height:1.245;
+  letter-spacing: 0.015em;
+  color:#080809;
+}
+.pic_of_month .details p{
+  font-size: 16px;
+  line-height: 1.245;
+  letter-spacing: -0.005;
+  color:#84829A;
+  margin-bottom:21px;
+}
+.pic_of_month .details p span{
+  position:relative;
+  margin-right:16px;
+}
+.pic_of_month .details p span:after{
+  content:'';
+  position: absolute;
+  height: 16px;
+  border-right: 1px solid #84829A;
+  bottom: 3px;
+  right: -3px;
+}
+.pic_of_month .details .icon{
+  display:flex;
+  margin-bottom:30px;
+  margin-left:3px;
+  gap:16px;
+}
+.pic_of_month .details .icon a{
+  width: 36px;
+  height: 36px;
+  justify-content: center;
+  align-items: center;
+  padding: 11px 12px 10px;
+  background :#F5F5F5;
+  border-radius:50%;
+  color:#84829A;
+  font-size:14px;
+}
+.pic_of_month .people{
+  display:flex;
+  gap:15px;
+  align-items:center;
+  color:#84829A;
+  font-weight: 600;
+}
+.details .wish{
+  position: absolute;
+  right:26px;
+  bottom:33px;
+  color:#4152ca;
+  font-size:18px;
+}
+.details .wish svg:last-child{
+  display:none;
+}
+.pic_of_month .ongoing{
+  display:flex;
+  align-items: center;
+  gap:12px;
+  border-radius:18px;
+  box-shadow: var(--shadow);
+  position:absolute;
+  right:-104px;
+  bottom:55px;
+  background:#fff;
+  padding: 19px 12px 21px 33px;
+}
+.ongoing h5{
+  font-size:14px;
+  line-height:17px;
+  color:#84829A;
+  margin-bottom:6px;
+  letter-spacing: -0.035em;
+  font-weight: 600;
+}
+.ongoing h4{
+  font-size:14px;
+  line-height:22px;
+  color:#080809;
+  letter-spacing: -0.015em;
+  margin-bottom:14px;
+}
+.ongoing p{
+  font-size:14px;
+  line-height:17px;
+  color:#080809;
+  letter-spacing: -0.055em;
+  margin-bottom:10px;
+}
+.ongoing p span{
+  color:#8A79DF;
+  font-weight: bold;
+  font-weight: 600;
 }
