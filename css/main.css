@@ -451,11 +451,12 @@ margin-bottom:26px;
   position:relative;
 }
 .progress_bar .bar{
- width: 40%;
+ width: 0;
  height: 100%;
  position:absolute;
  left:0;
  top:0;
  background:#8A79DF;
  border-radius:2.5px;
+ transition:0.3s;
 }
