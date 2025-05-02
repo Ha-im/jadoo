@@ -80,7 +80,7 @@ function changeTestimonial(idx){
 const partnersTotalWidth = document.body.offsetWidth;
 const partners = document.querySelector(".partners ul");
 const partnerSlides=partners.querySelectorAll('li');
-const partnerSlidesWidth = partnersTotalWidth/partnerSlides.length;
+const partnerSlidesWidth = 190;
 //파티너 각 슬라이드 너비 지정
 for(let Slide of partnerSlides){
     Slide.style.width = partnersTotalWidth +'px';
@@ -101,15 +101,31 @@ console.log(clonedSlide);
 partners.innerHTML = clonedSlide + slideHTML;
 
 //리스트 전체가 배치되도록 부모너비 변경
-partners.style.width = partnersTotalWidth * 2 + 'px';
+let newpartenerList = partners.querySelectorAll('li');
+partners.style.width = newpartenerList.length * partnerSlidesWidth + 'px';
 //파트너 슬라이드 이동
 let partnerLeft = 0;
+let animation;
 function movePartners(){
     // partnerLeft = partnerLeft -2;
     partnerLeft -= 2
+    if(partnerLeft < -partnerSlidesWidth * newpartenerList.length/2){
+        // -1921 < -1920
+        partnerLeft = 0
+    }
     partners.style.left = partnerLeft + 'px';
     //requestAnimationFrame(함수) 함수를 반복 실행 //
     //requestAnimationFrame(movePartners); // 함수 반복실행
-    requestAnimationFrame(movePartners); // movepartners 함수내에서 재실행
+    animation = requestAnimationFrame(movePartners); // movepartners 함수내에서 재실행
 }
 requestAnimationFrame(movePartners); // movePartners 함수의 내용을 애니메이션으로 변경 (부드럽게 이동시켜주는역활)
+
+//requestAnimationFrame 멈추는 함수 
+//cancleAnimationFrame(대상)
+partners.addEventListener('mouseenter',()=>{
+    cancelAnimationFrame(animation);
+});
+
+partners.addEventListener('mouseleave',()=>{
+    requestAnimationFrame(movePartners);
+});
