@@ -10,7 +10,7 @@ const testimonialList = document.querySelectorAll(".testimonials ul li");
 const testimonial_pager = document.querySelectorAll(".testimonials .pager a");
 const testimonial_upBtn = document.querySelector(".testimonials .up");
 const testimonial_downBtn = document.querySelector(".testimonials .down");
-let testimonialIndex = 0;
+let testimonialIdx = 0;
 
 
 console.log(ongoing_percent);
@@ -35,30 +35,45 @@ function satartNumberAnimation(){
         }
     }, 100);
 }
-
     testimonial_pager.forEach((pager, index) => {
         pager.addEventListener("click", (e) => {
             e.preventDefault();
-            //모든페이저에서 acrive 클래스 제거
-            testimonial_pager.forEach((item) => {
-                item.classList.remove("active");
-            });
-            //클릭한 페이저에 active 클래스 추가
-            pager.classList.add("active");
-
-            testimonialList.forEach((item) => {
-                item.classList.remove("active");
-            });
-            testimonialList[index].classList.add("active");
-            testimonialIndex = index;
-        });
+            changeTestimonial(index);
     });
+    });
+
 testimonial_downBtn.addEventListener("click", (e) => {
     e.preventDefault();
-    if (testimonialIndex < testimonialList.length - 1) {
-        testimonialIndex++;
+    if (testimonialIdx < testimonialList.length - 1) {
+        testimonialIdx++;
     } else {
-        testimonialIndex = 0;
+        testimonialIdx = 0;
     }
-    changeTestimonial(testimonialIndex);
+    changeTestimonial(testimonialIdx);
 })
+
+testimonial_upBtn.addEventListener("click",()=>{
+    if(testimonialIdx > 0){
+        testimonialIdx--;
+    }else{
+        testimonialIdx = testimonialList.length -1
+    }
+    changeTestimonial(testimonialIdx);
+})
+
+function changeTestimonial(idx){
+    //모든페이저에서 acrive 클래스 제거
+    testimonial_pager.forEach((item) => {
+        item.classList.remove("active");
+    });
+    //클릭한 페이저에 active 클래스 추가
+    testimonial_pager[idx].classList.add("active");
+
+    testimonialList.forEach((item) => {
+        item.classList.remove("active");
+    });
+    testimonialList[idx].classList.add("active");
+    testimonialIdx = idx;
+}
+
+
