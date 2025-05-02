@@ -111,7 +111,7 @@ function movePartners(){
     partnerLeft -= 2
     if(partnerLeft < -partnerSlidesWidth * newpartenerList.length/2){
         // -1921 < -1920
-        partnerLeft = 0
+        partnerLeft = 0;
     }
     partners.style.left = partnerLeft + 'px';
     //requestAnimationFrame(함수) 함수를 반복 실행 //
@@ -119,7 +119,7 @@ function movePartners(){
     animation = requestAnimationFrame(movePartners); // movepartners 함수내에서 재실행
 }
 requestAnimationFrame(movePartners); // movePartners 함수의 내용을 애니메이션으로 변경 (부드럽게 이동시켜주는역활)
-
+console.log(movePartners);
 //requestAnimationFrame 멈추는 함수 
 //cancleAnimationFrame(대상)
 partners.addEventListener('mouseenter',()=>{
